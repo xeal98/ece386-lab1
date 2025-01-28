@@ -1,8 +1,6 @@
 """
 TODO: Insert what this program does here.
 """
-from PIL import Image
-from io import BytesIO
 import sys
 import requests
 
@@ -12,8 +10,8 @@ def get_img_prediction(
 ) -> str:
     """Send image to server for prediction."""
     # TODO: Replace with code to send image to server
-    postedInfo = requests.post({server_ip:server_port}, path = image_path)
-    getInfo = requests.get({server_ip:server_port})
+    postedInfo = requests.post({server_ip:server_port}, params=api_path, path=image_path)
+    getInfo = requests.get({server_ip:server_port}, timeout=2)
     decodedJSON = getInfo.json()
     decodedJSON.raise_for_status()
     return decodedJSON[1]
@@ -26,7 +24,9 @@ def main(server_ip: str, server_port: int) -> None:
     """
     # TODO: Replace with prompt to user and call to get_img_prediction
     print(f"Using server {server_ip}:{server_port}")
-
+    while(True):
+        filePath = input("Enter the file path of the digit to be identified: ")
+        get_img_prediction(server_ip, server_port, "/predict", filePath)
 
 if __name__ == "__main__":
     # Ensure user passes required arguments
