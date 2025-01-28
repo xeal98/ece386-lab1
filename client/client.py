@@ -1,8 +1,8 @@
 """
 TODO: Insert what this program does here.
 """
-#from PIL import Image
-#from io import BytesIO
+from PIL import Image
+from io import BytesIO
 import sys
 import requests
 
@@ -12,8 +12,11 @@ def get_img_prediction(
 ) -> str:
     """Send image to server for prediction."""
     # TODO: Replace with code to send image to server
-    response = requests.post(server_ip server_port, path = image_path)
-    return ""
+    postedInfo = requests.post({server_ip:server_port}, path = image_path)
+    getInfo = requests.get({server_ip:server_port})
+    decodedJSON = getInfo.json()
+    decodedJSON.raise_for_status()
+    return decodedJSON[1]
 
 
 def main(server_ip: str, server_port: int) -> None:
