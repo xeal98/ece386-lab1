@@ -10,7 +10,7 @@ def get_img_prediction(
 ) -> str:
     """Send image to server for prediction."""
     # TODO: Replace with code to send image to server
-    postedInfo = requests.post({server_ip:server_port}, params=api_path, path=image_path)
+    postedInfo = requests.post(f"{server_ip}:{server_port}{api_path}", params=api_path, path=image_path)
     getInfo = requests.get({server_ip:server_port}, timeout=2)
     decodedJSON = getInfo.json()
     decodedJSON.raise_for_status()

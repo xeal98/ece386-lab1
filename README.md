@@ -20,5 +20,6 @@ See [USAFA ECE 386: AI Hardware Applications - Lab 1](https://usafa-ece.github.i
 ### Does the client/server architecture make sense for this problem? Why or why not?
 
 ## Documentation
+Read the Pillow 11.1.0 documentation on how to resize images.
 
 *Documentation statement. Pay special attention to the LLM policy.*
