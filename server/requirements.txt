@@ -1,4 +1,9 @@
 pillow
+<<<<<<< HEAD
 tensorflow-cpu
 numpy
 fastapi[standard]
+=======
+fastapi[standard]
+tensorflow
+>>>>>>> refs/remotes/origin/main

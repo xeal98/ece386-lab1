@@ -25,6 +25,7 @@ Given the fact that it is unable to recognize digits that are similar to what it
 The client/server architecture does not make sense for this problem because the processing power required to run this model is rather minute. It is not that extremely complicated of a model that it is necessary to off-load the work to another system. All of this could have been done on one machine easily, which we saw when we had done this model in Google Colab. Colab does not provide an exorbitant amount of processing power, which is further proof that this could have been run on one machine. 
 
 ## Documentation
+Read the Pillow 11.1.0 documentation on how to resize images.
 
 We consulted the documentation for FastAPI, TensorFlow, the Requests library, and Python's built-in JSON module. We also consulted Deepseek R1 on how to properly read a raw bytestream from an HTTP Post request in FastAPI BECAUSE THEIR DOCUMENTATION ALWAYS WANTS TO STEER YOU TO USING THE MULTIPART/FORM-DATA UPLOAD WHEN WE JUST NEED THE OCTET STREAM. This is why NodeJS is better.
 
