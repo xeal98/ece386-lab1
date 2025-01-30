@@ -1,4 +1,4 @@
 pillow
-fastapi[standard]
-tensorflow
+tensorflow-cpu
 numpy
+fastapi[standard]
