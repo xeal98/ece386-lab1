@@ -24,6 +24,8 @@ Given the fact that it is unable to recognize digits that are similar to what it
 ### Does the client/server architecture make sense for this problem? Why or why not?
 The client/server architecture does not make sense for this problem because the processing power required to run this model is rather minute. It is not that extremely complicated of a model that it is necessary to off-load the work to another system. All of this could have been done on one machine easily, which we saw when we had done this model in Google Colab. Colab does not provide an exorbitant amount of processing power, which is further proof that this could have been run on one machine. 
 
+The only way that using a client/server architecture makes sense for this problem is to teach us how to read documentation on the subject, and get us familiar with how a client/server relationship works. In this aspect, the client/server architecture makes sense for this problem.
+
 ## Documentation
 Read the Pillow 11.1.0 documentation on how to resize images.
 
